@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa de Leão — Carvalhos de Justiça Church | Ribeirão Preto</title>
+  <meta name="description" content="Uma igreja em células em Ribeirão Preto. Cultos domingo às 18h e quinta às 20h, reunião de oração quarta às 12h. Vem como você é — a Casa de Leão está de portas abertas para você.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="canonical" href="https://ballesoli.github.io/OAK-Casa-de-Leao/">
+
+  <!-- Compartilhamento (WhatsApp / redes sociais) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Casa de Leão — Carvalhos de Justiça Church">
+  <meta property="og:description" content="Você não está aqui por acaso. Uma família em células, cultos e oração em Ribeirão Preto. Vem como você é.">
+  <meta property="og:image" content="https://ballesoli.github.io/OAK-Casa-de-Leao/assets/hero.jpg">
+  <meta property="og:url" content="https://ballesoli.github.io/OAK-Casa-de-Leao/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ NAVEGAÇÃO ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="#inicio" class="brand" aria-label="Casa de Leão - início">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4.2 4L12 4.5 16.8 12 21 8v9.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z" fill="currentColor"/><circle cx="3" cy="5.6" r="1.5" fill="currentColor"/><circle cx="12" cy="2.8" r="1.5" fill="currentColor"/><circle cx="21" cy="5.6" r="1.5" fill="currentColor"/></svg>
+        </span>
+        <span class="brand-text">
+          <strong>Casa de Leão</strong>
+          <small>Carvalhos de Justiça Church</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#celulas">Células</a>
+        <a href="#cultos">Cultos</a>
+        <a href="#online">Online</a>
+        <a href="#localizacao">Localização</a>
+        <a class="btn btn-gold btn-nav" href="https://wa.me/5516992126535?text=Quero%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">Fale conosco</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <canvas id="hero3d" aria-hidden="true"></canvas>
+    <div class="hero-rays" aria-hidden="true"></div>
+    <div class="hero-fade" aria-hidden="true"></div>
+
+    <div class="hero-content container">
+      <p class="hero-eyebrow reveal">
+        <svg class="crown" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4.2 4L12 4.5 16.8 12 21 8v9.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z" fill="currentColor"/><circle cx="3" cy="5.6" r="1.5" fill="currentColor"/><circle cx="12" cy="2.8" r="1.5" fill="currentColor"/><circle cx="21" cy="5.6" r="1.5" fill="currentColor"/></svg>
+        Carvalhos de Justiça • Casa de Leão Church
+      </p>
+
+      <h1 class="reveal" style="--d:.12s">Você não está<br><span class="grad-text">aqui por acaso.</span></h1>
+
+      <p class="hero-sub reveal" style="--d:.24s">
+        Tem um lugar em Ribeirão Preto onde você é esperado pelo nome: uma família que
+        ora junto, cresce em células durante a semana e celebra a Deus em cada culto.
+        <strong>Vem como você é — do jeito que você estiver.</strong>
+      </p>
+
+      <div class="hero-cta reveal" style="--d:.36s">
+        <a class="btn btn-gold btn-lg" href="https://wa.me/5516992126535?text=Quero%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-3 4.2c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.7c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.4-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5L10 8.7c-.2-.4-.4-.4-.6-.4H9z" fill="currentColor"/></svg>
+          Quero visitar
+        </a>
+        <a class="btn btn-ghost btn-lg" href="https://www.youtube.com/@fernanda_olegario/streams" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 8.2v7.6l6.6-3.8-6.6-3.8z" fill="currentColor"/><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3a2.6 2.6 0 0 0-1.8 1.9A27 27 0 0 0 2 12c0 1.6.1 3.2.4 4.8a2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9c.3-1.6.4-3.2.4-4.8 0-1.6-.1-3.2-.4-4.8zM10 15.2V8.8l5.8 3.2L10 15.2z" fill="currentColor" opacity=".35"/><path d="M9.5 8.2v7.6l6.6-3.8-6.6-3.8z" fill="currentColor"/></svg>
+          Assistir online
+        </a>
+      </div>
+
+      <div class="next-event reveal" style="--d:.48s">
+        <span class="ne-label">Próximo encontro</span>
+        <span class="ne-name" id="evName">—</span>
+        <span class="ne-sep" aria-hidden="true"></span>
+        <span class="ne-count" id="evCount" aria-live="polite">…</span>
+      </div>
+    </div>
+
+    <div class="hero-schedule" aria-label="Nossos horários">
+      <a href="#cultos" class="hs-chip reveal" style="--d:.1s">
+        <span class="hs-day">Domingo</span><span class="hs-time">18h</span><span class="hs-type">Culto</span>
+      </a>
+      <a href="#cultos" class="hs-chip reveal" style="--d:.2s">
+        <span class="hs-day">Quarta</span><span class="hs-time">12h</span><span class="hs-type oracao">Oração</span>
+      </a>
+      <a href="#cultos" class="hs-chip reveal" style="--d:.3s">
+        <span class="hs-day">Quinta</span><span class="hs-time">20h</span><span class="hs-type">Culto</span>
+      </a>
+      <a href="#cultos" class="hs-chip reveal" style="--d:.4s">
+        <span class="hs-day">Último dom. do mês</span><span class="hs-time">9h</span><span class="hs-type">Culto da Manhã</span>
+      </a>
+    </div>
+
+    <a class="scroll-down" href="#sobre" aria-label="Rolar para baixo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14m0 0l-6-6m6 6l6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- ============ LETREIRO ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Vem como você é <i>✦</i> Casa de Leão <i>✦</i> Uma igreja em células <i>✦</i> Ribeirão Preto • SP <i>✦</i> Sua história muda aqui <i>✦</i></span>
+      <span>Vem como você é <i>✦</i> Casa de Leão <i>✦</i> Uma igreja em células <i>✦</i> Ribeirão Preto • SP <i>✦</i> Sua história muda aqui <i>✦</i></span>
+    </div>
+  </div>
+
+  <!-- ============ SOBRE ============ -->
+  <section class="section sobre" id="sobre">
+    <div class="glow glow-gold" aria-hidden="true"></div>
+    <div class="container sobre-grid">
+      <div class="sobre-visual reveal-l" data-tilt>
+        <div class="frame frame-main">
+          <img src="assets/sobre.jpg" alt="Pessoas se abraçando na porta da igreja" loading="lazy">
+        </div>
+        <div class="frame frame-leao" data-tilt>
+          <img src="assets/leao.jpg" alt="Leão dourado — símbolo do Leão de Judá" loading="lazy">
+          <span class="frame-caption">Do Leão de Judá<br>veio a força para recomeçar</span>
+        </div>
+        <div class="badge-verso" data-tilt>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 5.9L20.6 7l-4.3 4.3 1.2 6.1L12 14.4 6.5 17.4l1.2-6.1L3.4 7l6.2.9L12 2z" fill="currentColor"/></svg>
+          <span>Isaías<br>61:3</span>
+        </div>
+      </div>
+
+      <div class="sobre-text">
+        <p class="kicker reveal">Nossa casa</p>
+        <h2 class="reveal" style="--d:.1s">Uma casa. Uma família.<br><span class="grad-text">Um propósito.</span></h2>
+        <p class="lead reveal" style="--d:.2s">
+          A <strong>Casa de Leão</strong> é a família da Igreja Carvalhos de Justiça em Ribeirão Preto —
+          uma casa de portas escancaradas, onde ninguém passa despercebido.
+        </p>
+        <p class="reveal" style="--d:.28s">
+          Aqui você encontra gente real, com histórias reais, descobrindo um Deus que transforma.
+          Não importa de onde você vem nem o que já viveu: <strong>existe um lugar à mesa para você.</strong>
+        </p>
+        <blockquote class="verse reveal" style="--d:.36s">
+          <p>“…para que se chamem carvalhos de justiça, plantio do Senhor, para que ele seja glorificado.”</p>
+          <cite>Isaías 61:3</cite>
+        </blockquote>
+
+        <div class="sobre-features">
+          <div class="feature reveal" style="--d:.1s" data-tilt>
+            <span class="f-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 20v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+            </span>
+            <h3>Comunidade de verdade</h3>
+            <p>Gente que conhece você pelo nome e caminha com você nos altos e baixos.</p>
+          </div>
+          <div class="feature reveal" style="--d:.2s" data-tilt>
+            <span class="f-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+            </span>
+            <h3>Palavra que transforma</h3>
+            <p>Mensagens vivas e práticas, para a sua vida de segunda a domingo.</p>
+          </div>
+          <div class="feature reveal" style="--d:.3s" data-tilt>
+            <span class="f-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </span>
+            <h3>Adoração com intensidade</h3>
+            <p>Momentos que tocam o coração e conectam você com a presença de Deus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CÉLULAS ============ -->
+  <section class="section celulas" id="celulas">
+    <div class="glow glow-amber" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker reveal">Células</p>
+        <h2 class="reveal" style="--d:.1s">A igreja que você procura<br>cabe na <span class="grad-text">sala de uma casa</span></h2>
+        <p class="section-sub reveal" style="--d:.2s">
+          Somos uma igreja que trabalha com células: pequenos grupos que se reúnem nas casas
+          durante a semana para compartilhar a vida, orar e crescer na fé — de perto, de verdade.
+        </p>
+      </div>
+
+      <div class="celulas-grid">
+        <div class="celulas-photo reveal-l" data-tilt>
+          <img src="assets/celulas.jpg" alt="Grupo de célula reunido em uma sala de casa" loading="lazy">
+          <div class="photo-overlay">
+            <p>Uma célula é uma família dentro da família.</p>
+          </div>
+        </div>
+
+        <div class="celulas-cards">
+          <div class="step reveal-r" data-tilt>
+            <span class="step-n">01</span>
+            <div>
+              <h3>Perto de você</h3>
+              <p>Tem célula se reunindo pela cidade. Ninguém precisa caminhar sozinho.</p>
+            </div>
+          </div>
+          <div class="step reveal-r" style="--d:.12s" data-tilt>
+            <span class="step-n">02</span>
+            <div>
+              <h3>Durante a semana</h3>
+              <p>A vida com Deus não acontece só no domingo. Nas células, ela acontece todos os dias.</p>
+            </div>
+          </div>
+          <div class="step reveal-r" style="--d:.24s" data-tilt>
+            <span class="step-n">03</span>
+            <div>
+              <h3>Cuidado de perto</h3>
+              <p>Um lugar para ser conhecido, ouvido e amado — como toda família deveria ser.</p>
+            </div>
+          </div>
+
+          <a class="btn btn-gold btn-lg btn-block reveal" style="--d:.36s" href="https://wa.me/5516992126535?text=Quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20c%C3%A9lulas" target="_blank" rel="noopener">
+            Quero entrar em uma célula
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CULTOS ============ -->
+  <section class="section cultos" id="cultos">
+    <div class="glow glow-gold" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker reveal">Cultos &amp; encontros</p>
+        <h2 class="reveal" style="--d:.1s">Um encontro com Deus<br><span class="grad-text">a cada semana</span></h2>
+        <p class="section-sub reveal" style="--d:.2s">Escolha um horário e venha celebrar conosco. Traga a família, convide um amigo — a casa é sua.</p>
+      </div>
+
+      <div class="cultos-grid">
+        <div class="cultos-photo reveal-l">
+          <div class="photo-stick" data-tilt>
+            <img src="assets/culto.jpg" alt="Adoração no culto com luzes douradas" loading="lazy">
+            <div class="photo-overlay">
+              <p>Adoração, palavra<br>e comunhão</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cultos-cards">
+          <article class="schedule reveal-r" data-tilt>
+            <div class="s-when">
+              <span class="s-day">Domingo</span>
+              <span class="s-time">18<sup>h</sup></span>
+            </div>
+            <div class="s-info">
+              <span class="s-tag">Culto</span>
+              <h3>Culto de Celebração</h3>
+              <p>Adoração e palavra para toda a família, encerrando a semana na presença de Deus.</p>
+            </div>
+          </article>
+
+          <article class="schedule reveal-r" style="--d:.1s" data-tilt>
+            <div class="s-when">
+              <span class="s-day">Quarta</span>
+              <span class="s-time">12<sup>h</sup></span>
+            </div>
+            <div class="s-info">
+              <span class="s-tag tag-oracao">Oração</span>
+              <h3>Reunião de Oração</h3>
+              <p>Meio-dia de intercessão e busca a Deus. Encontro de oração — não é culto.</p>
+            </div>
+          </article>
+
+          <article class="schedule reveal-r" style="--d:.2s" data-tilt>
+            <div class="s-when">
+              <span class="s-day">Quinta</span>
+              <span class="s-time">20<sup>h</sup></span>
+            </div>
+            <div class="s-info">
+              <span class="s-tag">Culto</span>
+              <h3>Culto</h3>
+              <p>Uma noite de fé, adoração e comunhão no meio da semana.</p>
+            </div>
+          </article>
+
+          <article class="schedule schedule-hl reveal-r" style="--d:.3s" data-tilt>
+            <div class="s-when">
+              <span class="s-day">Último domingo do mês</span>
+              <span class="s-time">9<sup>h</sup></span>
+            </div>
+            <div class="s-info">
+              <span class="s-tag">Culto especial</span>
+              <h3>Culto da Manhã</h3>
+              <p>Um começo de domingo diferente: comece o dia na presença de Deus.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ONLINE ============ -->
+  <section class="section online" id="online">
+    <div class="glow glow-red" aria-hidden="true"></div>
+    <div class="container online-grid">
+      <div class="online-text">
+        <p class="kicker reveal">Online</p>
+        <h2 class="reveal" style="--d:.1s">Não pode vir hoje?<br><span class="grad-text">Esteja aqui de onde estiver.</span></h2>
+        <p class="lead reveal" style="--d:.2s">
+          Acompanhe nossas transmissões e lives no YouTube.
+          A mesma fé, a mesma família — dentro da sua casa.
+        </p>
+        <div class="reveal" style="--d:.3s">
+          <a class="btn btn-red btn-lg" href="https://www.youtube.com/@fernanda_olegario/streams" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.3-.4-4.9a2.6 2.6 0 0 0-1.8-1.8C19.2 5 12 5 12 5s-7.2 0-8.8.3A2.6 2.6 0 0 0 1.4 7.1C1 8.7 1 12 1 12s0 3.3.4 4.9a2.6 2.6 0 0 0 1.8 1.8C4.8 19 12 19 12 19s7.2 0 8.8-.3a2.6 2.6 0 0 0 1.8-1.8C23 15.3 23 12 23 12zM9.8 15.3V8.7l5.9 3.3-5.9 3.3z" fill="currentColor"/></svg>
+            Entrar no canal do YouTube
+          </a>
+          <p class="online-note">Canal Fernanda Olegário • @fernanda_olegario</p>
+        </div>
+      </div>
+      <div class="online-photo reveal-r" data-tilt>
+        <img src="assets/online.jpg" alt="Família assistindo à transmissão da igreja em casa" loading="lazy">
+        <span class="play-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z" fill="currentColor"/></svg>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOCALIZAÇÃO ============ -->
+  <section class="section local" id="localizacao">
+    <div class="glow glow-gold" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker reveal">Onde estamos</p>
+        <h2 class="reveal" style="--d:.1s">Você é <span class="grad-text">nosso convidado</span></h2>
+        <p class="section-sub reveal" style="--d:.2s">Estamos te esperando em Ribeirão Preto. Qualquer dúvida, chama no WhatsApp.</p>
+      </div>
+
+      <div class="local-grid">
+        <div class="local-card reveal-l" data-tilt>
+          <span class="pin-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <h3>R. João Bim, 2265</h3>
+          <p class="local-city">Ribeirão Preto • SP</p>
+          <p class="local-hint">Chegue alguns minutos antes para garantir seu lugar. Vai ser um prazer receber você.</p>
+          <div class="local-actions">
+            <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20Jo%C3%A3o%20Bim,%202265%20-%20Ribeir%C3%A3o%20Preto%20-%20SP" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Como chegar
+            </a>
+            <a class="btn btn-ghost" href="https://wa.me/5516992126535?text=Quero%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-3 4.2c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.7c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.4-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5L10 8.7c-.2-.4-.4-.4-.6-.4H9z" fill="currentColor"/></svg>
+              Chamar no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="map-frame reveal-r">
+          <iframe
+            title="Mapa — R. João Bim, 2265, Ribeirão Preto"
+            src="https://www.google.com/maps?q=Rua%20Jo%C3%A3o%20Bim,%202265%20-%20Ribeir%C3%A3o%20Preto%20-%20SP&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="cta-final">
+    <div class="cta-bg" aria-hidden="true"></div>
+    <canvas id="embers" aria-hidden="true"></canvas>
+    <div class="container cta-inner">
+      <p class="kicker kicker-light reveal">Dá o primeiro passo</p>
+      <h2 class="reveal" style="--d:.1s">O primeiro passo é seu.<br><span class="grad-text">O resto a gente faz juntos.</span></h2>
+      <p class="reveal" style="--d:.2s">Deixe Deus escrever o próximo capítulo da sua história. A Casa de Leão está de portas abertas.</p>
+      <a class="btn btn-gold btn-xl reveal" style="--d:.3s" href="https://wa.me/5516992126535?text=Quero%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-3 4.2c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.7c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.4-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5L10 8.7c-.2-.4-.4-.4-.6-.4H9z" fill="currentColor"/></svg>
+        Quero mais informações
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="f-brand">
+        <a href="#inicio" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4.2 4L12 4.5 16.8 12 21 8v9.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8z" fill="currentColor"/><circle cx="3" cy="5.6" r="1.5" fill="currentColor"/><circle cx="12" cy="2.8" r="1.5" fill="currentColor"/><circle cx="21" cy="5.6" r="1.5" fill="currentColor"/></svg>
+          </span>
+          <span class="brand-text">
+            <strong>Casa de Leão</strong>
+            <small>Carvalhos de Justiça Church</small>
+          </span>
+        </a>
+        <p>Uma família em células, plantada em Ribeirão Preto para a glória de Deus.</p>
+      </div>
+
+      <div class="f-col">
+        <h4>Horários</h4>
+        <ul>
+          <li><span>Domingo</span><b>18h • Culto</b></li>
+          <li><span>Quarta</span><b>12h • Oração</b></li>
+          <li><span>Quinta</span><b>20h • Culto</b></li>
+          <li><span>Último dom. do mês</span><b>9h • Culto da Manhã</b></li>
+        </ul>
+      </div>
+
+      <div class="f-col">
+        <h4>Contato</h4>
+        <ul class="f-links">
+          <li>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20Jo%C3%A3o%20Bim,%202265%20-%20Ribeir%C3%A3o%20Preto%20-%20SP" target="_blank" rel="noopener">R. João Bim, 2265 — Ribeirão Preto • SP</a>
+          </li>
+          <li>
+            <a href="https://wa.me/5516992126535?text=Quero%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">WhatsApp (16) 99212-6535</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@fernanda_olegario/streams" target="_blank" rel="noopener">YouTube @fernanda_olegario</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="ano">2026</span> Carvalhos de Justiça — Casa de Leão Church. Todos os direitos reservados.</p>
+      <p class="f-made">Feito com fé em Ribeirão Preto</p>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLUTUANTE ============ -->
+  <a class="wa-float" href="https://wa.me/5516992126535?text=Quero%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener" aria-label="Quero mais informações no WhatsApp">
+    <span class="wa-tooltip">Quero mais informações</span>
+    <span class="wa-ring" aria-hidden="true"></span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-3 4.2c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.7c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.4-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5L10 8.7c-.2-.4-.4-.4-.6-.4H9z" fill="currentColor"/></svg>
+  </a>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+  <script defer src="js/three-scene.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
