@@ -1,0 +1,39 @@
+# robots.txt — Casa de Leão (Carvalhos de Justiça OAK Church)
+# Site: https://ballesoli.github.io/OAK-Casa-de-Leao/
+
+# Todos os robôs de busca podem indexar o site
+User-agent: *
+Allow: /
+
+# Motores de IA e assistentes (GEO — otimização para motores generativos)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://ballesoli.github.io/OAK-Casa-de-Leao/sitemap.xml
