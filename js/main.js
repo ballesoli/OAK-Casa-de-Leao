@@ -165,6 +165,115 @@
       setInterval(tick, 1000);
     }
 
+    /* ---------- Slider de fotos das células ---------- */
+    var celSlider = document.getElementById("celSlider");
+    if (celSlider) {
+      var slides = celSlider.querySelectorAll(".cel-slide");
+      var dotsBox = document.getElementById("celDots");
+      var barFill = celSlider.querySelector(".cel-bar-fill");
+      var btnPrev = document.getElementById("celPrev");
+      var btnNext = document.getElementById("celNext");
+      var totalSlides = slides.length;
+      var curSlide = 0;
+      var celTimer = null;
+      var CEL_DUR = 5000;
+      var celInView = true;
+      var celHovering = false;
+
+      var celDots = [];
+      slides.forEach(function (_, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "cel-dot" + (i === 0 ? " is-active" : "");
+        b.setAttribute("aria-label", "Ver foto " + (i + 1));
+        b.addEventListener("click", function () { celShow(i); celSync(); });
+        dotsBox.appendChild(b);
+        celDots.push(b);
+      });
+
+      function celPaint() {
+        slides.forEach(function (s, i) {
+          s.classList.toggle("is-active", i === curSlide);
+          s.setAttribute("aria-hidden", i === curSlide ? "false" : "true");
+        });
+        celDots.forEach(function (d, i) { d.classList.toggle("is-active", i === curSlide); });
+      }
+
+      function celRestartBar() {
+        if (!barFill) return;
+        barFill.classList.remove("run");
+        void barFill.offsetWidth; /* reinicia a animação */
+        barFill.classList.add("run");
+      }
+
+      function celShow(i) {
+        curSlide = (i + totalSlides) % totalSlides;
+        celPaint();
+      }
+
+      function celShouldRun() {
+        return !prefersReduced && !celHovering && celInView && !document.hidden;
+      }
+
+      function celPlay() {
+        celStopTimer();
+        if (!celShouldRun()) return;
+        celSlider.classList.remove("is-paused");
+        celRestartBar();
+        celTimer = setInterval(function () { celShow(curSlide + 1); }, CEL_DUR);
+      }
+
+      function celStopTimer() {
+        if (celTimer) { clearInterval(celTimer); celTimer = null; }
+      }
+
+      function celPause() {
+        celStopTimer();
+        celSlider.classList.add("is-paused");
+      }
+
+      function celSync() {
+        if (celShouldRun()) celPlay(); else celPause();
+      }
+
+      btnPrev.addEventListener("click", function () { celShow(curSlide - 1); celSync(); });
+      btnNext.addEventListener("click", function () { celShow(curSlide + 1); celSync(); });
+
+      /* pausa no hover (apenas em dispositivos com mouse) */
+      if (!isTouch) {
+        celSlider.addEventListener("mouseenter", function () { celHovering = true; celSync(); });
+        celSlider.addEventListener("mouseleave", function () { celHovering = false; celSync(); });
+      }
+      document.addEventListener("visibilitychange", celSync);
+
+      /* pausa quando o slider sai da tela */
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (entries) {
+          celInView = entries[0].isIntersecting;
+          celSync();
+        }, { threshold: 0.2 }).observe(celSlider);
+      }
+
+      /* deslizar no toque */
+      var celSx = null, celSy = null;
+      celSlider.addEventListener("pointerdown", function (e) {
+        celSx = e.clientX; celSy = e.clientY;
+      }, { passive: true });
+      celSlider.addEventListener("pointerup", function (e) {
+        if (celSx === null) return;
+        var dx = e.clientX - celSx;
+        var dy = e.clientY - celSy;
+        celSx = celSy = null;
+        if (Math.abs(dx) > 42 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+          celShow(dx < 0 ? curSlide + 1 : curSlide - 1);
+          celSync();
+        }
+      }, { passive: true });
+
+      celPaint();
+      celSync();
+    }
+
     /* ---------- Partículas azuis no CTA final ---------- */
     var embers = document.getElementById("embers");
     if (embers && !prefersReduced) {

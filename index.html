@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casa de Leão — Carvalhos de Justiça Church | Ribeirão Preto</title>
+  <title>Casa de Leão — Carvalhos de Justiça OAK Church | Ribeirão Preto</title>
   <meta name="description" content="Uma igreja em células em Ribeirão Preto. Cultos domingo às 18h e quinta às 20h, reunião de oração quarta às 12h. Vem como você é — a Casa de Leão está de portas abertas para você.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="canonical" href="https://ballesoli.github.io/OAK-Casa-de-Leao/">
 
   <!-- Compartilhamento (WhatsApp / redes sociais) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Casa de Leão — Carvalhos de Justiça Church">
+  <meta property="og:title" content="Casa de Leão — Carvalhos de Justiça OAK Church">
   <meta property="og:description" content="Você não está aqui por acaso. Uma família em células, cultos e oração em Ribeirão Preto. Vem como você é.">
   <meta property="og:image" content="https://ballesoli.github.io/OAK-Casa-de-Leao/assets/logo-og.jpg">
   <meta property="og:url" content="https://ballesoli.github.io/OAK-Casa-de-Leao/">
@@ -32,7 +32,7 @@
         </span>
         <span class="brand-text">
           <strong>Casa de Leão</strong>
-          <small>Carvalhos de Justiça Church</small>
+          <small>Carvalhos de Justiça OAK Church</small>
         </span>
       </a>
 
@@ -62,7 +62,7 @@
     <div class="hero-content container">
       <p class="hero-eyebrow reveal">
         <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
-        Carvalhos de Justiça • Casa de Leão Church
+        Carvalhos de Justiça OAK Church • Casa de Leão
       </p>
 
       <h1 class="reveal" style="--d:.12s">Você não está<br><span class="grad-text">aqui por acaso.</span></h1>
@@ -129,8 +129,7 @@
           <img src="assets/sobre.jpg" alt="Pessoas se abraçando na porta da igreja" loading="lazy">
         </div>
         <div class="frame frame-leao" data-tilt>
-          <img src="assets/leao.jpg" alt="Leão dourado — símbolo do Leão de Judá" loading="lazy">
-          <span class="frame-caption">Do Leão de Judá<br>veio a força para recomeçar</span>
+          <img src="assets/logo-leao.jpg" alt="Logotipo da Igreja Casa de Leão — leão e igreja" loading="lazy">
         </div>
         <div class="badge-verso" data-tilt>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 5.9L20.6 7l-4.3 4.3 1.2 6.1L12 14.4 6.5 17.4l1.2-6.1L3.4 7l6.2.9L12 2z" fill="currentColor"/></svg>
@@ -195,11 +194,30 @@
       </div>
 
       <div class="celulas-grid">
-        <div class="celulas-photo reveal-l" data-tilt>
-          <img src="assets/celulas.jpg" alt="Grupo de célula reunido em uma sala de casa" loading="lazy">
+        <div class="cel-slider reveal-l" id="celSlider" aria-roledescription="carrossel" aria-label="Fotos das células da Casa de Leão">
+          <div class="cel-bar" aria-hidden="true"><span class="cel-bar-fill"></span></div>
+          <div class="cel-slides">
+            <figure class="cel-slide is-active"><img src="assets/celulas/celula-01.jpg" alt="Célula da igreja reunida em volta da mesa com a família e as crianças" loading="eager" decoding="async"></figure>
+            <figure class="cel-slide"><img src="assets/celulas/celula-02.jpg" alt="Célula reunida na varanda com louvor e comunhão" loading="lazy" decoding="async"></figure>
+            <figure class="cel-slide"><img src="assets/celulas/celula-03.jpg" alt="Família da célula sorrindo reunida em casa" loading="lazy" decoding="async"></figure>
+            <figure class="cel-slide"><img src="assets/celulas/celula-04.jpg" alt="Célula compartilhando uma refeição à mesa" loading="lazy" decoding="async"></figure>
+            <figure class="cel-slide"><img src="assets/celulas/celula-05.jpg" alt="Membros da célula reunidos com camisas amarelas" loading="lazy" decoding="async"></figure>
+            <figure class="cel-slide"><img src="assets/celulas/celula-06.jpg" alt="Célula celebrando junta em um encontro" loading="lazy" decoding="async"></figure>
+            <figure class="cel-slide"><img src="assets/celulas/celula-07.jpg" alt="Jovens da célula em momento de alegria" loading="lazy" decoding="async"></figure>
+            <figure class="cel-slide"><img src="assets/celulas/celula-08.jpg" alt="Crianças e adolescentes da célula da igreja" loading="lazy" decoding="async"></figure>
+            <figure class="cel-slide"><img src="assets/celulas/celula-09.jpg" alt="Adolescentes da Geração Eleita em um encontro da célula" loading="lazy" decoding="async"></figure>
+            <figure class="cel-slide"><img src="assets/celulas/celula-10.jpg" alt="Grupo da célula em um evento da igreja" loading="lazy" decoding="async"></figure>
+          </div>
           <div class="photo-overlay">
             <p>Uma célula é uma família dentro da família.</p>
           </div>
+          <div class="cel-dots" id="celDots" aria-label="Escolher foto"></div>
+          <button class="cel-nav cel-prev" id="celPrev" type="button" aria-label="Foto anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="cel-nav cel-next" id="celNext" type="button" aria-label="Próxima foto">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
         </div>
 
         <div class="celulas-cards">
@@ -427,7 +445,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="ano">2026</span> Carvalhos de Justiça — Casa de Leão Church. Todos os direitos reservados.</p>
+      <p>© <span id="ano">2026</span> Carvalhos de Justiça OAK Church — Casa de Leão. Todos os direitos reservados.</p>
       <p class="f-made">Feito com fé em Ribeirão Preto</p>
     </div>
   </footer>

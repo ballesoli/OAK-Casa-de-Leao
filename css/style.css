@@ -223,7 +223,7 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.15; letter-spacing: 
 }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-text strong { font-family: var(--font-h); font-weight: 800; font-size: 1.12rem; letter-spacing: .04em; }
-.brand-text small { font-size: .62rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gold-2); }
+.brand-text small { font-size: .62rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gold-2); text-shadow: 0 1px 10px rgba(5, 11, 28, .9); }
 
 .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); }
 .nav-links a:not(.btn) {
@@ -562,7 +562,7 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.15; letter-spacing: 
   box-shadow: 0 30px 70px -24px rgba(0,0,0,.95), 0 0 46px -14px rgba(96,165,250,.35);
   animation: floatCard 7s ease-in-out infinite;
 }
-.frame-leao img { filter: contrast(1.06) saturate(1.08); }
+/* Logo da Casa de Leão: exibido sem filtros, com as cores originais da arte */
 @keyframes floatCard {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-13px) rotate(.6deg); }
@@ -730,6 +730,102 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.15; letter-spacing: 
 }
 .step h3 { font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; margin-bottom: .3rem; }
 .step p { font-size: .9rem; color: var(--muted); line-height: 1.65; }
+
+/* ---------- Slider de fotos reais das células ---------- */
+.cel-slider {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(96, 165, 250, .25);
+  box-shadow: 0 40px 90px -36px rgba(0, 0, 0, .95);
+  aspect-ratio: 1.7;
+  background: radial-gradient(120% 140% at 50% 30%, #0e1e3e 0%, #060d1d 72%);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}
+.cel-slides { position: absolute; inset: 0; }
+.cel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .9s ease;
+  will-change: opacity;
+}
+.cel-slide.is-active { opacity: 1; z-index: 1; }
+/* Fotos inteiras (object-fit: contain): sem cortar rostos ou cenário */
+.cel-slide img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+.cel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink);
+  background: rgba(6, 13, 29, .62);
+  border: 1px solid rgba(96, 165, 250, .4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: transform .3s, border-color .3s, box-shadow .3s;
+}
+.cel-nav svg { width: 22px; height: 22px; }
+.cel-prev { left: .9rem; }
+.cel-next { right: .9rem; }
+.cel-nav:hover {
+  border-color: var(--gold-2);
+  box-shadow: 0 0 26px -6px rgba(96, 165, 250, .7);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.cel-dots {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 5;
+  display: flex;
+  gap: .45rem;
+}
+.cel-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(220, 234, 255, .38);
+  cursor: pointer;
+  transition: width .35s, background .35s, box-shadow .35s;
+}
+.cel-dot.is-active {
+  width: 26px;
+  background: var(--grad-gold);
+  box-shadow: 0 0 12px -2px rgba(96, 165, 250, .8);
+}
+
+.cel-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  height: 3px;
+  background: rgba(220, 234, 255, .14);
+}
+.cel-bar-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+  background: var(--grad-gold);
+}
+.cel-bar-fill.run { animation: celProgress 5s linear forwards; }
+.cel-slider.is-paused .cel-bar-fill { animation-play-state: paused; }
+@keyframes celProgress { from { width: 0; } to { width: 100%; } }
 
 /* ============================================================
    CULTOS
@@ -927,7 +1023,7 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.15; letter-spacing: 
   width: 100%;
   height: 100%;
   border: 0;
-  filter: grayscale(1) sepia(.4) hue-rotate(180deg) saturate(1.7) brightness(.56) contrast(1.12);
+  /* Mapa nas cores originais do Google Maps */
 }
 
 /* ============================================================
@@ -1155,6 +1251,13 @@ body.menu-open .wa-float { opacity: 0; pointer-events: none; transform: scale(.8
   .schedule { grid-template-columns: 92px 1fr; padding: 1.2rem 1.1rem; gap: 1rem; }
   .schedule-hl .s-info { padding-right: 70px; }
 
+  .cel-nav { width: 40px; height: 40px; }
+  .cel-prev { left: .6rem; }
+  .cel-next { right: .6rem; }
+  .cel-dots { top: .8rem; right: .8rem; gap: .35rem; }
+  .cel-dot { width: 8px; height: 8px; }
+  .cel-dot.is-active { width: 20px; }
+
   .footer-grid { grid-template-columns: 1fr; text-align: left; }
   .f-col li { flex-direction: column; gap: .15rem; align-items: flex-start; }
   .f-col li b { text-align: left; }
@@ -1203,10 +1306,11 @@ body.menu-open .wa-float { opacity: 0; pointer-events: none; transform: scale(.8
   display: block;
 }
 
-/* Harmonização azul das fotos (grade cinematográfica) */
-.frame, .celulas-photo, .photo-stick, .online-photo { position: relative; }
-.frame img, .celulas-photo img, .photo-stick img, .online-photo img { filter: saturate(.82); }
-.frame::before, .celulas-photo::before, .photo-stick::before, .online-photo::before {
+/* Harmonização azul apenas das fotos ilustrativas
+   (não afeta o logo da Casa de Leão nem as fotos reais das células) */
+.photo-stick, .online-photo { position: relative; }
+.frame-main img, .photo-stick img, .online-photo img { filter: saturate(.82); }
+.frame-main::before, .photo-stick::before, .online-photo::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -1215,7 +1319,7 @@ body.menu-open .wa-float { opacity: 0; pointer-events: none; transform: scale(.8
   background: linear-gradient(165deg, rgba(34, 80, 175, .58), rgba(9, 24, 62, .68));
   mix-blend-mode: color;
 }
-.photo-overlay, .frame-caption, .play-badge { z-index: 3; }
+.photo-overlay, .play-badge { z-index: 3; }
 
 /* Fundos de impacto (hero e CTA) com grade azul */
 .hero-bg::after, .cta-bg::after {
