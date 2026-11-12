@@ -1,7 +1,7 @@
 /* ============================================================
    CASA DE LEÃO — Interações do site
    Nav, menu mobile, reveals 3D no scroll, tilt 3D nos cards,
-   contagem regressiva do próximo encontro e brasas no CTA.
+   contagem regressiva do próximo encontro e partículas azuis no CTA.
    ============================================================ */
 (function () {
   "use strict";
@@ -31,12 +31,14 @@
         var open = links.classList.toggle("open");
         toggle.classList.toggle("open", open);
         toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        document.body.classList.toggle("menu-open", open);
       });
       links.querySelectorAll("a").forEach(function (a) {
         a.addEventListener("click", function () {
           links.classList.remove("open");
           toggle.classList.remove("open");
           toggle.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("menu-open");
         });
       });
     }
@@ -163,7 +165,7 @@
       setInterval(tick, 1000);
     }
 
-    /* ---------- Brasas douradas no CTA final ---------- */
+    /* ---------- Partículas azuis no CTA final ---------- */
     var embers = document.getElementById("embers");
     if (embers && !prefersReduced) {
       var ctx = embers.getContext("2d");
@@ -211,9 +213,9 @@
 
           var flicker = 0.72 + Math.sin(p.tw * 2.4) * 0.28;
           var g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3.4);
-          g.addColorStop(0, "rgba(255,238,190," + (p.a * flicker).toFixed(3) + ")");
-          g.addColorStop(0.4, "rgba(244,208,110," + (p.a * 0.55 * flicker).toFixed(3) + ")");
-          g.addColorStop(1, "rgba(212,175,55,0)");
+          g.addColorStop(0, "rgba(214,236,255," + (p.a * flicker).toFixed(3) + ")");
+          g.addColorStop(0.4, "rgba(126,180,250," + (p.a * 0.55 * flicker).toFixed(3) + ")");
+          g.addColorStop(1, "rgba(70,130,230,0)");
           ctx.fillStyle = g;
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.r * 3.4, 0, Math.PI * 2);

@@ -23,10 +23,10 @@ Site oficial da **Casa de Leão**, família da Igreja Carvalhos de Justiça em R
 
 ```
 ├── index.html          # Página única (todas as seções)
-├── css/style.css       # Estilos (tema escuro + dourado, efeitos 3D)
-├── js/three-scene.js   # Cena 3D do topo (Three.js: coroa + partículas)
-├── js/main.js          # Menu, reveals 3D, tilt, contagem regressiva, brasas
-└── assets/             # Imagens e favicon
+├── css/style.css       # Estilos (tema azul profundo com degradê, efeitos 3D)
+├── js/three-scene.js   # Cena 3D do topo (Three.js: carvalho azul + partículas)
+├── js/main.js          # Menu, reveals 3D, tilt, contagem regressiva, partículas
+└── assets/             # Imagens, logo e favicon
 ```
 
 ## Como editar
